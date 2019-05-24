@@ -154,7 +154,7 @@ body {
 .header__nav--link--active, .header__nav--link:hover {
     background-color: #03749c;
     color: #f6fef7;
-    border-bottom: 1px solid #f6fef7;
+    border-bottom: 1px solid #023d67;
 }
 
 .header__showcase {
