@@ -1,0 +1,215 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 1.5s linear 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.fadeInLeft {
+    animation: fadeInLeft 1.5s linear;
+    animation-fill-mode: forwards;
+}
+
+.fadeInRight {
+    animation: fadeInRight 1.5s linear;
+    animation-fill-mode: forwards;
+}
+
+.fadeInUp {
+    animation: fadeInUp 1s linear;
+    animation-fill-mode: forwards;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px, 10/16 = 62.5% */
+}
+
+@media (max-width: 75em) {
+    html {
+        font-size: 56.25%;
+    }
+}
+
+@media (max-width: 56.25em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (min-width: 112.5em) {
+    html {
+        font-size: 75%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.header {
+    position: relative;
+    color: #222222;
+    cursor: default;
+    animation: fadeIn 1s ease-in;
+}
+
+.header__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem 2.5rem;
+    z-index: 21;
+    display: flex;
+    flex-flow: row-reverse;
+}
+
+.header__logo--title {
+    color: #f6fef7;
+    padding: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+.header__logo--img {
+    width: 4.5rem;
+    cursor: pointer;
+}
+
+.header__nav {
+    position: fixed;
+    height: 6.1rem;
+    width: 100vw;
+    z-index: 20;
+    background-color: rgba(21, 177, 215, 0.8);
+}
+
+.header__nav--list {
+    list-style: none;
+    position: absolute;
+    top: 2.1rem;
+    right: 0;
+}
+
+.header__nav--item {
+    display: inline-block;
+}
+
+.header__nav--link {
+    text-decoration: none;
+    font: inherit;
+    color: #222222;
+    font-size: 1.4rem;
+    padding: 2.1rem;
+    border-bottom: 1px solid transparent;
+    transition: all 250ms ease;
+}
+
+.header__nav--link--active, .header__nav--link:hover {
+    background-color: #03749c;
+    color: #f6fef7;
+    border-bottom: 1px solid #f6fef7;
+}
+
+.header__showcase {
+    position: relative;
+    background-image: linear-gradient(rgba(212, 66, 6, 0.7) 0%, rgba(34, 34, 34, 0.7) 70%), url("../img/family_coaching_solutions_contact.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.header__showcase--container {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    opacity: 0;
+    animation: fadeInLeft 1.5s ease 1s forwards;
+}
+
+.header__showcase--main {
+    color: #f6fef7;
+    font-size: 6rem;
+    font-weight: 200;
+    margin-bottom: 5rem;
+}
+
+.header__showcase--sub {
+    color: #5cd4ef;
+    font-size: 3rem;
+    letter-spacing: 0.6rem;
+    margin-bottom: 10rem;
+    padding-left: 50rem;
+}
+
+.header__showcase--btn {
+    padding: 1.5rem 2.5rem;
+    background-color: #03749c;
+    width: fit-content;
+    text-decoration: none;
+    color: #f6fef7;
+    font-size: 1.4rem;
+    border-radius: 2px;
+    box-shadow: 0 0.2rem 2rem #222222;
+    transition: all 250ms ease;
+    opacity: 0;
+    animation: fadeIn 1.5s ease 2.5s forwards;
+}
+
+.header__showcase--btn:hover {
+    background-color: #15b1d7;
+}
+
+.header__showcase--btn:active {
+    background-color: #023d67;
+}
